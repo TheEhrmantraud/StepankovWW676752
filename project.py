@@ -44,20 +44,27 @@ def create_user():
         "reservation_date_book": None
     }
 
-def popizdelki():
+def popizdelki(da):
     user = create_user()
     user["name"] = input("Ваше имя: ").strip()
     user["lastname"] = input("Ваша фамилия: ").strip()
     user["midlename"] = input("Ваше отчество: ").strip()
     user["age"] = int(input("Ваш возраст: "))
     user["books"] = input("Какую книгу вы хотите взять? ").strip()
-    user["status_hodki"] = input("Ваш статус (Каждый день, По будням, По выходным, Иногда): ").strip()
-    if user ["status_hodki"] in ('по выходным', 'по будням'): user["status"] = 'Активный'
-    elif user ["status_hodki"] in ('каждый день', 'иногда'): user["status"] = 'Пассивный'
+    
+    status_map= {
+        'Каждый день': 'Активный',
+        'По будням': 'Активный',
+        'По выходным': 'Пассивный',
+        'Иногда': 'Пассивный',
+    }
+
+    #user["status"] = status_map.get(, 'Неизвестно')
     user["reservation_date_book"] = datetime.datetime.strptime(input("Когда вы хотите взять книгу? (формат ГГГГ-ММ-ДД): ").strip(), "%Y-%m-%d").date()
     today = user["reservation_date_book"] 
     user["deadline_book"] = today + datetime.timedelta(days=14)
     return user
+
 
 def main():
     while True:
