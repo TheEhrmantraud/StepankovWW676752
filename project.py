@@ -127,7 +127,7 @@ def popizdelki():
 def main():
     while True:
         print("\n\nЗдравствуйте! Введите информацию о клиенте")
-        choice = input("Введите 1 для регистрации клиента: ")
+        choice = input("Введите 1 для регистрации клиента (2 - если клиент уже существует): ")
         if choice == "1":
             user = popizdelki()
             
@@ -164,6 +164,8 @@ def main():
                 print("\nИзменения внесены:\n")
                 for key, value in user.items():
                     print(f"{key}: {value}")
+        if choice == "2":
+            
 
 if __name__ == "__main__":
     main()
