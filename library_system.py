@@ -15,7 +15,7 @@ def initialize_files():
             {"id": 1, "title": "Война и мир", "author": "Лев Толстой", "available": True},
             {"id": 2, "title": "Преступление и наказание", "author": "Фёдор Достоевский", "available": True},
             {"id": 3, "title": "Мастер и Маргарита", "author": "Михаил Булгаков", "available": True},
-            {"id": 4, "title": "Евгений Онегин", "author": "Александр Пушкин", "available": True},
+            {"id": 4, "title": "Евгений О негин", "author": "Александр Пушкин", "available": True},
             {"id": 5, "title": "Анна Каренина", "author": "Лев Толстой", "available": True},
             {"id": 6, "title": "Идиот", "author": "Фёдор Достоевский", "available": True},
             {"id": 7, "title": "Братья Карамазовы", "author": "Фёдор Достоевский", "available": True},
